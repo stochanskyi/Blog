@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   get "about_me", to: "info_pages#about_me"
 
+  post "auth/login"
   # match ':controller(/:action(/:id))', :via => :get
 end
