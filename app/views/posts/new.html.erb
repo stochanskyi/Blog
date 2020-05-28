@@ -1,17 +1,20 @@
-<h3>Craete new post</h3>
+<div class="wrapper">
+  <div class="title">
+    <h1>Create new post</h1>
+  </div>
+  <form class="formContainer" method="POST" action="/posts/save" enctype="multipart/form-data">
+    <%= token_tag %>
 
-<form method="POST" action="/posts/save" enctype="multipart/form-data">
-  <%= token_tag %>
-
-  <div>
-    <label for="header">Title<br></label>
-    <input type="text" name="header" >
-  </div>
-  <div>
-    <label for="body">Post Content<br></label>
-    <textarea name="body" cols="30" rows="10"></textarea>
-  </div>
-  <div>
-    <div><input type="submit" value="Create Post"></div>
-  </div>
-</form>
+    <div class="formItem">
+      <label class="formLabel" for="header">Title<br></label>
+      <input class="headerInputField" type="text" name="header">
+    </div>
+    <div class="formItem">
+      <label class="formLabel" for="body">Post Content<br></label>
+      <textarea class="inputField" name="body" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+      <div><input class="submitButton" type="submit" value="Create Post"></div>
+    </div>
+  </form>
+</div>

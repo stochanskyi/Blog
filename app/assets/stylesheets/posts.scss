@@ -8,7 +8,7 @@ body {
 }
 .wrapper {
   color: white;
-
+  height: 100%;
 }
 
 .title {
@@ -43,6 +43,9 @@ body {
   @extend .baseContainer
 }
 
+.formContainer {
+  @extend .baseContainer
+}
 .post {
   margin: 10px;
 
@@ -71,4 +74,48 @@ margin-top: 10px;
 
 .postAuthor {
   text-align: end;
+}
+
+.formItem {
+  width: 30%;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.formLabel {
+  font-size: 20px;
+}
+
+.inputField {
+  background: #2b2b2b;
+  border-color: darkorange;
+  border-width: 1px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+.headerInputField {
+  text-align: center;
+  @extend .inputField
+}
+.submitButton {
+  background: #2b2b2b;
+  border-color: darkorange;
+  border-width: 1px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #b8b8b8;
 }
