@@ -1,0 +1,21 @@
+<div class="wrapper">
+
+  <div class="title">
+    <h1>Welcome to MarS blog</h1>
+  </div>
+  <form class="formContainer" method="POST" action="/auth/login" enctype="multipart/form-data">
+    <%= token_tag %>
+
+    <div class="formItem">
+      <label class="formLabel" for="email">Email<br></label>
+      <input class="inputField" type="text" name="email" placeholder="example@mail.com">
+    </div>
+    <div class="formItem">
+      <label class="formLabel" for="password">Password<br></label>
+      <input class="inputField" type="password" name="password" placeholder="Your passwrd">
+    </div>
+    <div>
+      <div><input class="submitButton" type="submit" value="Log in"></div>
+    </div>
+  </form>
+</div>
