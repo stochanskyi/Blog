@@ -25,6 +25,9 @@ body {
   font-size: 15px;
 
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigationItem {
@@ -34,6 +37,20 @@ body {
   text-decoration: none;
   font-weight: normal;
 }
+.navigationBlock {
+  width: 100%;
+  text-align:end;
+}
+.navigationBlockStart {
+  text-align: start;
+  @extend .navigationBlock
+}
+.navigationBlockEnd {
+  text-align: end;
+  @extend .navigationBlock
+
+}
+
 .baseContainer {
 
   display: flex;
