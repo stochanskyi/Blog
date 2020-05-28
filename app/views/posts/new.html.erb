@@ -1,0 +1,14 @@
+<h3>Craete new post</h3>
+<%= form_for :post, url: posts_path do |f| %>
+  <p>
+    Post header<br>
+    <%= f.text_field :header %>
+  </p>
+  <p>
+    Please type your post<br>
+    <%= f.text_area :postBody %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
