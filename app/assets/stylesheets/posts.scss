@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+body {
+  background: #151515;
+}
+.wrapper {
+  color: white;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color:#d9d9d9;
+}
+
+.navigation {
+
+  background: #000000;
+  padding: 20px;
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+.navigationItem {
+  color: darkorange;
+  margin-right: 15px;
+  font-size: 18px;
+}
+.baseContainer {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postsContainer {
+  @extend .baseContainer
+}
+
+.formContainer {
+  @extend .baseContainer
+}
+.post {
+  margin: 10px;
+
+  background: #2b2b2b;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 10px;
+
+  color: #d9d9d9;
+
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 40%;
+}
+
+.postHeader {
+  text-align: center;
+}
+
+.postBody {
+margin-top: 10px;
+ }
+
+.postAuthor {
+  text-align: end;
+}
+
+.formItem {
+  width: 30%;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.formLabel {
+  font-size: 20px;
+}
+
+.inputField {
+  background: #2b2b2b;
+  border-color: darkorange;
+  border-width: 1px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+.headerInputField {
+  text-align: center;
+  @extend .inputField
+}
+.submitButton {
+  background: #2b2b2b;
+  border-color: darkorange;
+  border-width: 1px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #b8b8b8;
+}
