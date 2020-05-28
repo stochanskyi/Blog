@@ -10,5 +10,6 @@ class PostsController < ApplicationController
   def save
     @post = Post.new({:header => params[:header], :postBody => params[:body], :author => "asfd",  :authorID => "1231"})
     @post.save
+    redirect_to("/")
   end
 end
