@@ -1,14 +1,17 @@
 <h3>Craete new post</h3>
-<%= form_for :post, url: posts_path do |f| %>
-  <p>
-    Post header<br>
-    <%= f.text_field :header %>
-  </p>
-  <p>
-    Please type your post<br>
-    <%= f.text_area :postBody %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+
+<form method="POST" action="/posts/save" enctype="multipart/form-data">
+  <%= token_tag %>
+
+  <div>
+    <label for="header">Title<br></label>
+    <input type="text" name="header" >
+  </div>
+  <div>
+    <label for="body">Post Content<br></label>
+    <textarea name="body" cols="30" rows="10"></textarea>
+  </div>
+  <div>
+    <div><input type="submit" value="Create Post"></div>
+  </div>
+</form>
