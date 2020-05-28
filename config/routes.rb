@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get "posts/new"
   post "posts/save"
 
+  get "info_pages/about_me"
+  # match ':controller(/:action(/:id))', :via => :get
 end
