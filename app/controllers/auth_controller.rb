@@ -21,7 +21,8 @@ class AuthController < ApplicationController
   def register_user
     password = params[:password]
     confirm_password = params[:confirm_password]
-    if password != confirm_password
+    password_validation = validate_password(password, confirm_password)
+    if password_validation != true
       #Show error
       return
     end
@@ -37,5 +38,15 @@ class AuthController < ApplicationController
   def logout
     session.clear
     redirect_to("/")
+  end
+
+  def validate_password(password, password_conf)
+    if password.length < 8
+      "Password should be more then 8 chars"
+    elsif password != password_conf
+      "Password and confirmation should be same"
+    else
+      true
+    end
   end
 end
