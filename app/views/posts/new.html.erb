@@ -1,7 +1,13 @@
 <div class="wrapper">
   <div class="navigation">
-    <span><%=link_to "Home", "/", class: "navigationItem" %></span>
-    <span><%=link_to "Add post", posts_new_path, class: "navigationItem" %></span>
+    <div class="navigationBlockStart">
+      <span><%= link_to "Home", posts_path, class: "navigationItem" %></span>
+      <span><%= link_to "Add post", posts_new_path, class: "navigationItem" %></span>
+      <span><%= link_to "About developer", about_me_path, class: "navigationItem" %></span>
+    </div>
+    <div class="navigationBlockEnd">
+      <span><%= link_to "Log out", "/auth/logout", method: "post", class: "navigationItem" %></span>
+    </div>
 
   </div>
   <div class="title">

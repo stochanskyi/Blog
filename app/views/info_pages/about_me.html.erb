@@ -1,0 +1,16 @@
+<div>
+  <div class="navigation">
+    <div class="navigationBlockStart">
+      <span><%= link_to "Home", posts_path, class: "navigationItem" %></span>
+      <span><%= link_to "Add post", posts_new_path, class: "navigationItem" %></span>
+      <span><%= link_to "About developer", about_me_path, class: "navigationItem" %></span>
+    </div>
+    <div class="navigationBlockEnd">
+      <span><%= link_to "Log out", "/auth/logout", method: "post", class: "navigationItem" %></span>
+    </div>
+  </div>
+  <h1 class="title">Developers info</h1>
+  <h2 class="title">Developed and coded by Marian Stochanskyi,</h2>
+  <h2 class="title">Student of SE-25(ПЗ-25) of Institute of Computer Sciences and Information Technologies</h2>
+  <h2 class="title">Lviv Polytechnic National University</h2>
+</div>
