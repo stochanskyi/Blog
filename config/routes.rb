@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   post "auth/login"
   post "auth/logout"
+  post "auth/register_user"
 
   get "auth/index"
+  get "auth/registration"
   # match ':controller(/:action(/:id))', :via => :get
 end
