@@ -19,6 +19,10 @@ class AuthController < ApplicationController
   end
 
   def register_user
+    if User.exists?(email: params[:email])
+      redirect_to auth_registration_path, notice: "User with this email already exists"
+      return
+    end
     password = params[:password]
     confirm_password = params[:confirm_password]
     password_validation = validate_password(password, confirm_password)
