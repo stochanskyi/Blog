@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+.errorMessage {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ff3c00;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
