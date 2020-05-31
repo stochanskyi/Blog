@@ -23,7 +23,7 @@ class AuthController < ApplicationController
     confirm_password = params[:confirm_password]
     password_validation = validate_password(password, confirm_password)
     if password_validation != true
-      #Show error
+      redirect_to auth_registration_path, notice: password_validation
       return
     end
     name = params[:name]
