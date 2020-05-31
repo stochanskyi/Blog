@@ -13,15 +13,21 @@ class AuthController < ApplicationController
       @user = User.find_by_email(params[:email])
       session[:user_id] = @user.id
       redirect_to("/posts")
+    else
+      redirect_to "/", notice: "Invalid credentials"
     end
   end
 
   def register_user
+    if User.exists?(email: params[:email])
+      redirect_to auth_registration_path, notice: "User with this email already exists"
+      return
+    end
     password = params[:password]
     confirm_password = params[:confirm_password]
     password_validation = validate_password(password, confirm_password)
     if password_validation != true
-      #Show error
+      redirect_to auth_registration_path, notice: password_validation
       return
     end
     name = params[:name]
