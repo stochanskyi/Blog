@@ -13,6 +13,8 @@ class AuthController < ApplicationController
       @user = User.find_by_email(params[:email])
       session[:user_id] = @user.id
       redirect_to("/posts")
+    else
+      redirect_to "/", notice: "Invalid credentials"
     end
   end
 
