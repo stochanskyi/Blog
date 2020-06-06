@@ -8,14 +8,17 @@ class AuthController < ApplicationController
   end
 
   def login
-    is_login_success = User.exists?(email: params[:email], password: params[:password])
-    if is_login_success
-      @user = User.find_by_email(params[:email])
+    @user = User.find_by_email(params[:email])
+    if @user == nil
+      redirect_to "/", notice: "Invalid credentials"
+      return
+    end
+    if @user.decoded_password != params[:password]
+      redirect_to "/", notice: "Invalid credentials"
+      return
+    end
       session[:user_id] = @user.id
       redirect_to("/posts")
-    else
-      redirect_to "/", notice: "Invalid credentials"
-    end
   end
 
   def register_user
@@ -34,7 +37,7 @@ class AuthController < ApplicationController
     surname = params[:surname]
     email = params[:email]
 
-    @user = User.new({:name => name, :surname => surname, :email => email, :password => password})
+    @user = User.new({:name => name, :surname => surname, :email => email, :decoded_password => password})
     @user.save
     redirect_to("/")
   end
